@@ -1,0 +1,20 @@
+.jumbotron {
+  background-image: url(../images/jumbrotron.jpeg);
+}
+
+.title {
+  color: white;
+}
+.nav {
+  color: white;
+  border: solid 5px red;
+  display: inline;
+  font-size: large;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  border: solid 5px red;
+}

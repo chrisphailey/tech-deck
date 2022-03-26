@@ -40,7 +40,7 @@ app.use(require("./controllers/index"));
 // Database and Server
 const PORT = process.env.PORT || 3001;
 // Make sure force: false when dev is done
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
 });
 

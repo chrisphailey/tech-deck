@@ -1,4 +1,4 @@
-const router = require('express').Routers();
+const router = require('express').Router();
 const { User } = require('../../models');
 
 // get all users
@@ -29,3 +29,5 @@ router.get('/:id', (req, res) => {
         }
     })
 })
+
+module.exports = router

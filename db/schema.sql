@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS techDeck_db;
+DROP DATABASE IF EXISTS techdeck_db;
 
-CREATE DATABASE techDeck_db;
+CREATE DATABASE techdeck_db;
 
-USE techDeck_db;
+USE techdeck_db;

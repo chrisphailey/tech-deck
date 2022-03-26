@@ -1,13 +1,15 @@
+const express = require('express')
 const app = express();
 
 const path = require("path");
+const helpers = require('./utils/helpers');
+
 
 // Sequelize
 const sequelize = require("./config/connection");
 
 // Handlebars templates
 const exphbs = require("express-handlebars");
-const helpers = require("./utils/helpers");
 const hbs = exphbs.create({ helpers });
 // Set the handlebars engine
 app.set("view engine", "handlebars");

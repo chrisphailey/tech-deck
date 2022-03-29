@@ -1,0 +1,19 @@
+<div class="jumbotron flex">
+        <div class="container">
+            <div class="nav-container">
+                <h1 class="jumbo-title">Tech Deck</h1>
+                <nav>
+                    <a href="/" class="nav">Home</a>
+                    {{#if loggedIn}}
+                    <button id="logout" class="btn-no-style">logout</button>
+                    {{else}}
+                    <a href="/login" class="nav">Login/Signup</a>
+                    {{/if}}
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}

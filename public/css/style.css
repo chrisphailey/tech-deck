@@ -2,7 +2,7 @@
   background-image: url(../images/jumbrotron.jpeg);
 }
 
-.title {
+.jumbo-title {
   color: white;
 }
 .nav {
@@ -15,6 +15,9 @@
   display: flex;
   justify-content: space-between;
 }
-.title {
-  border: solid 5px red;
+.post-title {
+  color: black;
+}
+.post-date {
+  color: green;
 }

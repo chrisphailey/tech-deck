@@ -28,6 +28,26 @@ router.get('/:id', (req, res) => {
             key: "post_id"
         }
     })
+});
+
+router.post('/', (req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+    .then(data => {
+        req.session.save(() => {
+            req.session.user_id = data.id,
+            req.session.username = data.username,
+            req.session.loggedIn = true;
+
+            res.json(data)
+        });
+    })
+    .catch(err => {
+        res.status(500).json(err)
+    })
 })
 
 module.exports = router

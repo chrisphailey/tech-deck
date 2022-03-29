@@ -1,0 +1,32 @@
+{{>home-jumbotron}}
+
+<div class="title">
+    <div class="container">
+        <div class="row">
+            <h1>{{post.title}}</h1>
+            <p><strong>Posted on {{format_date post.created_at}} by {{user.username}}</strong></p>
+
+        </div>
+        <div class="content">
+        {{post.contents}}
+        </div>
+        {{#if loggedIn}}
+        <form class="comment-form">
+            <div class="comment-field">
+                <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Leave a comment here"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit" id="submit-comment">Add Comment</button>
+            </div>
+        </form>
+        {{/if}}
+        <div class="comments">
+            <p>{{>comments post.comments}}</p>
+        </div>
+
+
+    </div>
+</div>
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}

@@ -2,11 +2,12 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
 // get single post
-router.get('/post/:id', (req,res) => {
+router.get('/:id', (req,res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
+        attributes: ['id', 'title','contents', 'post_url','user_id'],
         include: [
             {
                 model: Comment,
@@ -27,14 +28,15 @@ router.get('/post/:id', (req,res) => {
             res.status(404).json({ message: 'No post found with this ID!'})
             return;
         }
-        res.render('single-post', {
-            post,
-            loggedIn: req.session.loggedIn
+        res.json(data)
         })
         .catch(err => {
             res.status(500).json(err)
         })
-    });
-})
+    })
+
+
+
+
 
 module.exports = router

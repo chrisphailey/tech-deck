@@ -8,8 +8,8 @@
         {{format_date created_at}}
         by
         {{user.username}}</p>
-      |
-      <a href="/post/{{id}}">{{comments.length}}
+      |--
+      <a class="comments" href="/post/{{id}}">{{comments.length}}
         {{format_plural "comment" comments.length}}</a>
     </div>
   </div>

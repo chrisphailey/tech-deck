@@ -14,9 +14,13 @@
   display: flex;
   justify-content: space-between;
 }
-.post-title {
+.post-title,
+.comments {
   color: black;
 }
 .post-date {
-  color: green;
+  color: rgb(221, 221, 221);
+}
+body {
+  background-color: rgb(77, 102, 60);
 }

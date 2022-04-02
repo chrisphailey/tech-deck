@@ -21,7 +21,6 @@ Post.init(
           },
         post_url: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 isUrl: true
             }
@@ -33,10 +32,6 @@ Post.init(
                 model: 'user',
                 key: 'id'
             }
-        },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: false
         }
     },
     {

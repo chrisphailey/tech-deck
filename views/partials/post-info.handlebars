@@ -1,6 +1,17 @@
 <article>
+  <div class="container">
     <div class="title">
-        <a class="post-title" href="/post/{{id}}">{{title}}</a>
-        <p class="post-date">Posted on: {{created_at}} by {{username}}</p>
+      <a class="post-title" href="/post/{{id}}">{{title}}</a>
     </div>
+    <div class="date d-flex">
+      <p class="post-date">Posted on:
+        {{format_date created_at}}
+        by
+        {{user.username}}</p>
+      |
+      <a href="/post/{{id}}">{{comments.length}}
+        {{format_plural "comment" comments.length}}</a>
+    </div>
+  </div>
+  <br />
 </article>

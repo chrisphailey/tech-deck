@@ -35,7 +35,25 @@ router.get('/:id', (req,res) => {
         })
     })
 
-
+// add post
+router.post('/', (req, res) => {
+    if(req.session){
+        Post.create({
+            title: req.body.title,
+            contents: req.body.contents,
+            post_url: req.body.post_url,
+            user_id: req.session.user_id
+        })
+        .then(data => {
+            console.log('@@@',data)
+            res.json(data)
+        })
+        .catch(err => {
+            console.log('@@@',err)
+            res.json(err)
+        })
+    }
+})
 
 
 

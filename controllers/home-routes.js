@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
         ]
     })
     .then(data => {
+        console.log(data)
         const posts = data.map(post => post.get({plain: true}));
 
         res.render('homepage', {
@@ -97,5 +98,6 @@ router.post('/logout', (req, res) => {
         res.status(404).end
     }
 })
+
 
 module.exports = router

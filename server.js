@@ -19,7 +19,7 @@ app.engine("handlebars", hbs.engine);
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sess = {
-  secret: process.env.SESSION_SECRET,
+  secret: teckie123,
   cookie: {},
   resave: false,
   saveUninitialized: true,

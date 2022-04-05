@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <h1>{{post.title}}</h1>
-            <p><strong>Posted on {{format_date post.created_at}} by {{user.username}}</strong></p>
+            <p><strong>Posted on {{format_date post.created_at}} by {{post.user.username}}</strong></p>
 
         </div>
         <div class="content">
